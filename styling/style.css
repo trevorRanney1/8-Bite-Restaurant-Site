@@ -11,8 +11,8 @@
     --purple: #964BBC;
     --light-purple: #cb69de;
 
-    --red: ;
-    --light-red: ;
+    --red: #EA4D4D;
+    --light-red: #FF9B8C;
 }
 
 html
@@ -26,7 +26,7 @@ html
 {
     background-size: 100%;
     background-attachment: fixed;
-    background-image: url('images/background.png');
+    background-image: url('images/wallpaper.png');
     background-attachment: fixed;
 }
 
@@ -34,15 +34,15 @@ html
 
 header
 {
-    background-color: #6172C6;
+    background-color: var(--blue);
     width: 100%;
     padding: 1vw;
-    border-bottom: 8px solid #F4BD58;
+    border-bottom: 8px solid var(--yellow);
 }
 
 h1
 {
-    color: #FFF591;
+    color: var(--light-yellow);
 }
 
 .logo
@@ -60,7 +60,7 @@ h1
 
 .headerItem > a
 {
-    background-color: #F4BD58;
+    background-color: var(--yellow);
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 5%;
@@ -73,6 +73,6 @@ h1
 
 .headerItem > a:hover
 {
-    background-color: #FFF591;
-
+    background-color: var(--light-yellow);
+    color: var(--yellow);
 }
