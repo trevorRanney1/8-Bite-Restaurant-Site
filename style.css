@@ -1,0 +1,284 @@
+/* Full Page */
+
+:root
+{
+    --blue: #6172C6;
+    --light-blue: #85a3ee;
+
+    --yellow: #F4BD58;
+    --light-yellow: #FFF591;
+
+    --purple: #964BBC;
+    --light-purple: #CE96EA;
+
+    --red: #EA4D4D;
+    --light-red: #FF9B8C;
+}
+
+@keyframes trevorTalk
+{
+    0% {transform: scale(0.9, 1.1) rotate(-20deg);}
+    25% {transform: scale(1.1, 0.9);}
+    50% {transform: scale(0.9, 1.1) rotate(20deg);}
+    75% {transform: scale(1.1, 0.9);}
+    100% {transform: scale(0.9, 1.1) rotate(-20deg);}
+}
+
+@keyframes foodDance
+{
+    0% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+    100% {transform: rotate(-5deg);}
+}
+
+@keyframes buttonHover
+{
+    0% {transform: translate(0vw, 0vw);}
+    25% {transform: translate(0vw, -0.25vw);}
+    55% {transform: translate(0vw, 0.1vw);}
+    75% {transform: translate(0vw, -0.05vw);}
+    100% {transform: translate(0vw, -0vw);}
+}
+
+html
+{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.webBackground
+{
+    background-size: 100%;
+    background-attachment: fixed;
+    background-image: url('images/websiteBG.png');
+    background-attachment: fixed;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header */
+
+header
+{
+    background-color: var(--blue);
+    width: 100%;
+    padding: 1vw;
+    border-bottom: 8px solid var(--yellow);
+}
+
+.headerItems
+{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+h1
+{
+    color: var(--light-yellow);
+    font-size: 6vw;
+}
+
+.logo
+{
+    width: 100%;
+}
+
+.headerItem
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerItem > a
+{
+    background-color: var(--yellow);
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+}
+
+.headerItem > a:hover
+{
+    background-color: var(--light-yellow);
+    color: var(--yellow);
+    animation-name: buttonHover;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+/* Main */
+
+.infoParagraph
+{
+    background-color: white;
+    border: 5px solid var(--red);
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.greeterHolder
+{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 1vw;
+}
+
+.greeting
+{
+    background-color: white;
+    border: 5px solid var(--light-blue);
+    padding: 1vw;
+    margin-right: 3vw;
+    color: var(--blue);
+    margin-top: 3.5vw;
+}
+
+.greeterHolder > img
+{
+    margin-top: 2vw;
+    width: 80%;
+    animation-name: trevorTalk;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.itemHolder
+{
+    background-color: var(--light-red);
+    border: 5px solid var(--red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5vw;
+}
+
+.itemHolder > p
+{
+    background-color: white;
+    border: 5px solid var(--red);
+    padding: 0.5vw;
+    width: 75%;
+    text-align: center;
+    margin: 0.5vw;
+}
+
+.itemHolder > img
+{
+    width: 75%;
+    animation-name: foodDance;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.addressLine
+{
+    background-color: white;
+    border: 5px solid var(--purple);
+    padding: 0.75vw;
+    margin: 1vw;
+    text-align: center;
+}
+
+.aboutImage
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.aboutImage > img
+{
+    width: 90%;
+    border: 5px solid var(--purple);
+}
+
+.oldSpriteHolder
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-red);
+    border: 5px solid var(--red);
+    width: 25%;
+    margin-left: 3vw;
+}
+
+.oldSpriteHolder > img
+{
+    width: 100%;
+}
+
+.menuTitle
+{
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    margin-top: 3vw;
+    margin-bottom: 0vw;
+    border-bottom: 5px solid var(--light-blue);
+}
+
+.menuRow
+{
+    background-color: var(--red);
+    margin: 2vw;
+    margin-top: 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItem
+{
+    background-color: var(--light-red);
+    width: 30%;
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+}
+
+.menuItem > .col-5 > img
+{
+    width: 100%;
+}
+
+.menuItem > .infoParagraph
+{
+    text-align: center;
+}
+
+/* Footer */
+
+footer
+{
+    background-color: var(--purple);
+    width: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1vw;
+    margin-top: 2vw;
+    border-left: 10px solid var(--yellow);
+    border-right: 10px solid var(--yellow);
+}
+
+footer > p
+{
+    color: white;
+    margin-top: 0.5vw;
+    margin-bottom: 0.25vw;
+}
